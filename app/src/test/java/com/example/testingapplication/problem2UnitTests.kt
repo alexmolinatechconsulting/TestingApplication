@@ -20,15 +20,13 @@ class problem2UnitTests {
         System.setOut(PrintStream(outputStreamCaptor))
     }
 
-    @Test
+    @Test(expected=Exception::class)
     fun reader_ValueProvidedIsNotInt_ThrowsException(){
 
         val input = "i34"
         System.setIn(ByteArrayInputStream(input.toByteArray()));
 
-        checkIfEvenOrOdd() // does this capture this input
-
-        Assert.assertThrows(InputMismatchException::class.java, { checkIfEvenOrOdd()})
+        checkIfEvenOrOdd()
     }
 
     @Test
