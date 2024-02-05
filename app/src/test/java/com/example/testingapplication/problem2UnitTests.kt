@@ -7,6 +7,7 @@ import org.junit.Test
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
+import java.util.InputMismatchException
 
 
 class problem2UnitTests {
@@ -27,7 +28,7 @@ class problem2UnitTests {
 
         checkIfEvenOrOdd() // does this capture this input
 
-        Assert.assertThrows(Exception::class.java, { checkIfEvenOrOdd()})
+        Assert.assertThrows(InputMismatchException::class.java, { checkIfEvenOrOdd()})
     }
 
     @Test
@@ -38,7 +39,7 @@ class problem2UnitTests {
 
         checkIfEvenOrOdd()
 
-        assertEquals("Enter a number: 4 iw even", outputStreamCaptor.toString())
+        assertEquals("Enter a number: 4 is even\n", outputStreamCaptor.toString())
     }
 
     @Test
@@ -49,6 +50,6 @@ class problem2UnitTests {
 
         checkIfEvenOrOdd()
 
-        assertEquals("Enter a number: 5 is odd", outputStreamCaptor.toString())
+        assertEquals("Enter a number: 5 is odd\n", outputStreamCaptor.toString())
     }
 }

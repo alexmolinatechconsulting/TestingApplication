@@ -41,6 +41,7 @@ class problem1UnitTests {
         val collection = listOf(1,2,3,4,5,536,31,4,2)
         val index1 = 4
         val index2 = 6
-        assertEquals(listOf(1,2,3,536,5,4,31,4,2), swapTwoNumbers(collection, index1, index2))
+        swapTwoNumbers(collection, index1, index2)
+        assertEquals(listOf(1,2,3,4,31,536,5,4,2), collection)
     }
 }

@@ -21,23 +21,23 @@ class problem3UnitTests {
     fun validPositiveValues_AddTogether_PrintTheSum(){
         val int1 = 5
         val int3 = 8
-        assertEquals(13, addTwoIntegers(int1, int3))
-        assertEquals("The sum is: 13", outputStreamCaptor.toString())
+        addTwoIntegers(int1, int3)
+        assertEquals("The sum is: 13\n", outputStreamCaptor.toString())
     }
 
     @Test
     fun validOppositeSignValues_AddTogether_PrintTheSum(){
         val int1 = 5
         val int3 = -8
-        assertEquals(-3, addTwoIntegers(int1, int3))
-        assertEquals("The sum is: -3", outputStreamCaptor.toString())
+        addTwoIntegers(int1, int3)
+        assertEquals("The sum is: -3\n", outputStreamCaptor.toString())
     }
 
     @Test
     fun validNegativeValues_AddTogether_PrintTheSum(){
         val int1 = -5
         val int3 = -8
-        assertEquals(-13, addTwoIntegers(int1, int3))
-        assertEquals("The sum is: -3", outputStreamCaptor.toString())
+        addTwoIntegers(int1, int3)
+        assertEquals("The sum is: -13\n", outputStreamCaptor.toString())
     }
 }
